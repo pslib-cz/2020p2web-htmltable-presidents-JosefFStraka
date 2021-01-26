@@ -8,7 +8,8 @@
   <style>
     table.presidents {
       width: 100%;
-      border-spacing: 0px;
+      border: 1px solid gray;
+      border-collapse: collapse;
     }
 
     .presidents th,
@@ -24,6 +25,14 @@
 
     .presidents td {
       font-weight: 400;
+    }
+
+    .presidents thead {
+      border-bottom: 2px solid black;
+    }
+
+    .presidents tfoot {
+      border-top: 2px solid black;
     }
 
     .presidents .komuniste {
@@ -47,12 +56,17 @@
     .presidents .sr {
       background-color: #F8BBD0;
     }
+
+    .presidents .fake {
+      color: #7e7e7e;
+    }
   </style>
 </head>
 
 <body>
-  <table class="presidents" cellspacing="0">
+  <table class="presidents">
     <caption>Seznam prezidentů ČR a SR od roku 1989</caption>
+
     <colgroup>
       <col class="roky">
       <col class="roky">
@@ -62,20 +76,20 @@
     </colgroup>
 
     <thead>
-      <tr>
+      <tr class="theader">
         <th>Od</th>
         <th>Do</th>
         <th>Česko</th>
         <th>Slovensko</th>
-        <th></th>
+        <th>Poznámka</th>
       </tr>
     </thead>
     <tbody class="komuniste">
       <tr>
         <th>1975</th>
         <th>1989</th>
-        <th colspan="2">Gustav Husák</th>
-        <th></th>
+        <td colspan="2">Gustav Husák</td>
+        <td></td>
       </tr>
 
     </tbody>
@@ -83,72 +97,72 @@
       <tr>
         <th>1989</th>
         <th>1990</th>
-        <th colspan="2" rowspan="2">Václav Havel</th>
-        <th>Zvolen federálním schromažděním (s převahou poslanců KSČ)</th>
+        <td colspan="2" rowspan="2">Václav Havel</td>
+        <td>Zvolen federálním schromažděním (s převahou poslanců KSČ)</td>
       </tr>
       <tr>
         <th>1990</th>
         <th>1992</th>
-        <th>31. prosince 1992 zaniká Česko-Slovenská Federativní Republika</th>
+        <td>31. prosince 1992 zaniká Česko-Slovenská Federativní Republika</td>
       </tr>
     </tbody>
     <tbody>
       <tr>
         <th>1993</th>
         <th>1998</th>
-        <th rowspan="3">Václav Havel</th>
-        <th>Michal Kováč</th>
-        <th></th>
+        <td rowspan="3">Václav Havel</td>
+        <td>Michal Kováč</td>
+        <td></td>
       </tr>
       <tr>
         <th>1998</th>
         <th>1999</th>
-        <th>bez prezidenta</th>
-        <th>Na Slovensku v této době byli pověřeni prezidentskými pravomocemi tehdejší premiéři</th>
+        <td class="fake">bez prezidenta</td>
+        <td class="fake">Na Slovensku v této době byli pověřeni prezidentskými pravomocemi tehdejší premiéři</td>
       </tr>
       <tr>
         <th>1999</th>
         <th>2003</th>
-        <th rowspan="2">Rudolf Schuster</th>
-        <th></th>
+        <td rowspan="2">Rudolf Schuster</td>
+        <td></td>
       </tr>
       <tr>
         <th>2003</th>
         <th>2004</th>
-        <th rowspan="2">Václav Klaus</th>
-        <th></th>
+        <td rowspan="2">Václav Klaus</td>
+        <td></td>
       </tr>
       <tr>
         <th>2004</th>
         <th>2013</th>
-        <th rowspan="2">Ivan Gašparovič</th>
-        <th></th>
+        <td rowspan="2">Ivan Gašparovič</td>
+        <td></td>
       </tr>
       <tr>
         <th>2013</th>
         <th>2014</th>
-        <th rowspan="3">Miloš Zeman</th>
-        <th></th>
+        <td rowspan="3">Miloš Zeman</td>
+        <td></td>
       </tr>
       <tr>
         <th>2014</th>
         <th>2019</th>
-        <th>Andrej Kiska</th>
-        <th></th>
+        <td>Andrej Kiska</td>
+        <td></td>
       </tr>
       <tr>
         <th>2019</th>
         <th>dosud</th>
-        <th>Zuzana Čaputová</th>
-        <th></th>
+        <td>Zuzana Čaputová</td>
+        <td></td>
       </tr>
     </tbody>
     <tfoot>
       <tr>
         <th colspan="2">Počet</th>
-        <th>2+3</th>
-        <th>2+5</th>
-        <th></th>
+        <td>2+3</td>
+        <td>2+5</td>
+        <td></td>
       </tr>
     </tfoot>
   </table>
