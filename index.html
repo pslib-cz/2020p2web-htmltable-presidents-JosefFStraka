@@ -8,6 +8,7 @@
   <style>
     table.presidents {
       width: 100%;
+      border-spacing: 0px;
     }
 
     .presidents th,
@@ -52,15 +53,15 @@
 <body>
   <table class="presidents" cellspacing="0">
     <caption>Seznam prezidentů ČR a SR od roku 1989</caption>
+    <colgroup>
+      <col class="roky">
+      <col class="roky">
+      <col class="cr">
+      <col class="sr">
+      <col>
+    </colgroup>
 
     <thead>
-      <colgroup>
-        <col class="roky">
-        <col class="roky">
-        <col class="cr">
-        <col class="sr">
-        <col>
-      </colgroup>
       <tr>
         <th>Od</th>
         <th>Do</th>
